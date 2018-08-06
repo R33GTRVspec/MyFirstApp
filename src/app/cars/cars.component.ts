@@ -6,26 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cars.component.css']
 })
 export class CarsComponent {
-
-  carName = '';
-  addCarStatus = false;
-  cars = ['Ford', 'Audi', 'BMW', 'SEAT', 'Mazda', 'Lada', 'Bentley'];
-  dates = [
-    new Date(2015,3,4),
-    new Date(2011,2,5),
-    new Date(2009,1,14),
-    new Date(2005,6,23),
-  ];
-
+  cars: {name: string, year: number}[] = [
+    {name: 'Ford', year: 2015},
+    {name: 'Mazda', year: 2010},
+    {name: 'SEAT', year: 2012},
+    {name: 'Audi', year: 2014}
+    ];
 
   constructor() {
   }
-
-  addCar() {
-    this.addCarStatus = true;
-    this.cars.push(this.carName);
-    this.carName = '';
-  }
-
-
+  updateCarList (car: {name: string, year: number}) {
+    this.cars.push(car);
+}
 }
