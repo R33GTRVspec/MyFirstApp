@@ -24,7 +24,6 @@ export class CarComponent implements
   AfterViewInit,
   AfterViewChecked,
   OnDestroy
-
 {
   @Input ('carItem') car: {name: string, year: number};
   @Input () name: string;

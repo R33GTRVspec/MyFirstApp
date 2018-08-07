@@ -8,9 +8,9 @@ import {Component } from '@angular/core';
 export class CarsComponent {
   cars: {name: string, year: number}[] = [
     {name: 'Ford', year: 2015},
-    // {name: 'Mazda', year: 2010},
-    // {name: 'SEAT', year: 2012},
-    // {name: 'Audi', year: 2014}
+    {name: 'Mazda', year: 2010},
+    {name: 'SEAT', year: 2012},
+    {name: 'Audi', year: 2014}
     ];
 
   constructor() {
@@ -21,7 +21,7 @@ export class CarsComponent {
   changeCarName() {
     this.cars[0].name = 'New Car Name!';
   }
-  deleteCar(){
+  deleteCar() {
     this.cars.splice(0, 1);
   }
 
